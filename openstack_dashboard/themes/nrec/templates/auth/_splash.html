@@ -1,6 +1,9 @@
-{% load i18n %}
+{% load i18n themes %}
 
 <div class="nrec-splash">
+  <img class="nrec-splash__logo"
+    src={% themable_asset "img/logo-splash.svg" %}
+    alt="{% trans 'NREC' %}">
   <div class="nrec-splash__eyebrow">NREC</div>
   <div class="nrec-splash__title">
     {% trans "Norwegian Research and Education Cloud" %}
