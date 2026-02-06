@@ -162,7 +162,7 @@
 }
 
 .nrec-login__footer-logos {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px 18px;
@@ -172,6 +172,7 @@
 .nrec-login__footer-logos img {
   display: inline-block;
   max-height: 55px;
+  max-width: 55px;
   width: auto;
 }
 
