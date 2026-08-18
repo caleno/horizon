@@ -1,0 +1,33 @@
+{% extends 'auth/_login_form.html' %}
+{% load i18n %}
+
+{% block pre_login %}
+  <div class="nrec-login">
+    <div class="nrec-login__inner">
+      <div class="nrec-login__brand">
+        {% include 'auth/_splash.html' %}
+      </div>
+      <div class="nrec-login__form">
+        {{ block.super }}
+{% endblock %}
+
+{% block login_header %}
+  <h3 class="login-title nrec-login__title">
+    {% trans "Sign in" %}
+  </h3>
+  <p class="nrec-login__subtitle">
+    {% trans "Use your OpenStack credentials to continue." %}
+  </p>
+{% endblock %}
+
+{% block login_footer %}
+  {{ block.super }}
+  {% include '_login_form_footer.html' %}
+{% endblock %}
+
+{% block post_login %}
+        {{ block.super }}
+      </div>
+    </div>
+  </div>
+{% endblock %}
